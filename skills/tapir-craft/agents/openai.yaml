@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tapir Craft"
+  short_description: "Tapir-style debugging, fixes, and code taste"
+  default_prompt: "Use $tapir-craft to investigate the issue, confirm the root cause, define a failing test or verification case, fix it, and loop through validation."

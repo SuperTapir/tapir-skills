@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "GPT 原理：它不是回答，它在续写",
+    "audience": "希望直观理解大语言模型原理的非算法受众",
+    "communicationChange": "By the end, the audience should understand that GPT repeatedly predicts the next token from context rather than retrieving a finished answer.",
+    "aspectRatio": "16:9",
+    "theme": "tapir-blue"
+  },
+  "tokens": {
+    "paper": "#F7F5EF",
+    "ink": "#111111",
+    "muted": "#85827A",
+    "accent": "#159BE8"
+  },
+  "slides": [
+    {
+      "id": "01-cover",
+      "role": "cover",
+      "layout": "cover-premise",
+      "claim": "GPT 不在回答，它在续写",
+      "lines": [
+        "GPT 不在回答",
+        { "text": "它在续写", "accent": true }
+      ],
+      "eyebrow": "HOW GPT WORKS",
+      "overflow": "intentional",
+      "visual": {
+        "pattern": "pass",
+        "anchor": "token-stream-axis"
+      },
+      "notes": "先打破“模型从知识库里找到答案”的直觉。"
+    },
+    {
+      "id": "02-intro",
+      "role": "intro",
+      "layout": "intro-tension",
+      "claim": "它看起来懂你，因为它很会猜",
+      "lines": [
+        "它看起来懂你",
+        { "text": "因为它很会猜", "accent": true }
+      ],
+      "eyebrow": "THE ILLUSION",
+      "supporting": "不是先想好整段答案，而是不断判断：下一个 Token 最可能是什么？",
+      "icon": "message-circle-more",
+      "overflow": "intentional",
+      "visual": {
+        "pattern": "focus",
+        "anchor": "next-token-focus"
+      },
+      "notes": "把“理解感”重新描述成连续预测造成的体验。"
+    },
+    {
+      "id": "03-agenda",
+      "role": "agenda",
+      "layout": "agenda-route",
+      "claim": "只看三件事",
+      "lines": ["只看三件事"],
+      "eyebrow": "ROUTE",
+      "items": [
+        { "label": "切开", "icon": "scissors" },
+        { "label": "关注", "icon": "scan-eye" },
+        { "label": "落位", "icon": "badge-check" }
+      ],
+      "visual": {
+        "pattern": "land",
+        "anchor": "three-step-token-route"
+      },
+      "notes": "Token 化、注意力、逐 Token 生成。"
+    },
+    {
+      "id": "04-section",
+      "role": "section",
+      "layout": "section-field",
+      "claim": "先把语言切开",
+      "lines": ["先把语言", "切开"],
+      "sectionNumber": "01",
+      "overflow": "intentional",
+      "visual": {
+        "pattern": "cut",
+        "anchor": "token-cut-axis"
+      },
+      "notes": "进入机制部分，页面承担强制换挡。"
+    },
+    {
+      "id": "05-relationship",
+      "role": "relationship",
+      "layout": "relationship-axis",
+      "claim": "注意力决定，此刻谁更重要",
+      "lines": ["注意力决定", "此刻谁更重要"],
+      "eyebrow": "ATTENTION",
+      "visual": {
+        "pattern": "pass",
+        "anchor": "attention-gate-axis",
+        "description": "上下文经过注意力权重后形成当前重点",
+        "before": {
+          "label": "上下文",
+          "icon": "braces"
+        },
+        "after": {
+          "label": "重点",
+          "icon": "crosshair"
+        }
+      },
+      "notes": "注意力不是平均观看，而是在当前一步重新分配权重。"
+    },
+    {
+      "id": "06-evidence",
+      "role": "evidence",
+      "layout": "evidence-single",
+      "claim": "每一步，只落下一个 Token",
+      "lines": [
+        "每一步",
+        { "text": "只落下一个 Token", "accent": true }
+      ],
+      "eyebrow": "NEXT TOKEN",
+      "evidence": {
+        "value": "1",
+        "label": "TOKEN / STEP",
+        "icon": "circle-dot"
+      },
+      "visual": {
+        "pattern": "land",
+        "anchor": "single-token-slot"
+      },
+      "motion": {
+        "label": "Token 逐个落位",
+        "durationMs": 2800,
+        "beats": [
+          { "label": "今", "delayMs": 0 },
+          { "label": "天", "delayMs": 650 },
+          { "label": "会", "delayMs": 1180 },
+          { "label": "下", "delayMs": 1620 },
+          { "label": "雨", "delayMs": 1980, "selected": true }
+        ]
+      },
+      "notes": "强调生成的最小步幅，并口头演示多轮落位。"
+    },
+    {
+      "id": "07-comparison",
+      "role": "comparison",
+      "layout": "comparison-weight",
+      "claim": "不是取回答，是选概率",
+      "lines": [
+        "不是取回答",
+        { "text": "是选概率", "accent": true }
+      ],
+      "eyebrow": "NOT RETRIEVAL",
+      "comparison": {
+        "left": "检索",
+        "right": "生成",
+        "leftIcon": "search",
+        "rightIcon": "dices"
+      },
+      "visual": {
+        "pattern": "replace",
+        "anchor": "shared-answer-footprint"
+      },
+      "notes": "模型参数编码了模式，但输出是在当前上下文里一步步生成。"
+    },
+    {
+      "id": "08-summary",
+      "role": "summary",
+      "layout": "summary-lock",
+      "claim": "GPT，就是反复选择下一个 Token",
+      "lines": [
+        "GPT，就是",
+        { "text": "反复选择下一个 Token", "accent": true }
+      ],
+      "eyebrow": "SUMMARY",
+      "supporting": "上下文提供线索，注意力分配权重，概率完成下一次落位。",
+      "icon": "repeat-2",
+      "visual": {
+        "pattern": "lock",
+        "anchor": "next-token-loop"
+      },
+      "notes": "用一句可复述的话收束机制。"
+    },
+    {
+      "id": "09-qa",
+      "role": "qa",
+      "layout": "qa-field",
+      "claim": "Q&A",
+      "lines": ["Q&A"],
+      "eyebrow": "OPEN FLOOR",
+      "supporting": "你可以从任何一个 Token 开始问。",
+      "visual": {
+        "pattern": "unfold",
+        "anchor": "qa-field"
+      },
+      "notes": "停留在简单、稳定的讨论页面。"
+    }
+  ]
+}
