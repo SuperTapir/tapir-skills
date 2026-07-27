@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect Video Frames"
+  short_description: "Extract video overviews and inspect precise frame ranges"
+  default_prompt: "Use $inspect-video-frames to inspect this video and summarize its visual timeline."
