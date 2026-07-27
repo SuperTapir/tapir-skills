@@ -21,6 +21,7 @@ Install one skill:
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-icon-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-presentation-craft
+npx skills@latest add SuperTapir/tapir-skills --skill inspect-video-frames
 ```
 
 ## Skills
@@ -33,6 +34,9 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-presentation-craft
 - **[tapir-presentation-craft](./skills/tapir-presentation-craft/SKILL.md)** —
   Concise, imageable, speaker-led presentations with decisive motion and a
   reusable source-first system.
+- **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — Staged
+  FFmpeg video inspection with metadata probes, timestamped overview sheets,
+  targeted high-FPS detail extraction, and explicit every-frame export.
 
 Each skill is a portable directory with a `SKILL.md` file at its root. Some
 skills also include references, scripts, examples, and agent-specific metadata.
