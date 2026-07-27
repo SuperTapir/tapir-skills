@@ -22,6 +22,7 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-icon-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-presentation-craft
 npx skills@latest add SuperTapir/tapir-skills --skill inspect-video-frames
+npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
 ```
 
 ## Skills
@@ -37,6 +38,9 @@ npx skills@latest add SuperTapir/tapir-skills --skill inspect-video-frames
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — Staged
   FFmpeg video inspection with metadata probes, timestamped overview sheets,
   targeted high-FPS detail extraction, and explicit every-frame export.
+- **[tapir-writing-voice](./skills/tapir-writing-voice/SKILL.md)** — 按 Tapir
+  已形成的中文写作声音起草、改写和审阅文章，保留真实经历、实践证据、
+  工程判断和克制口语，并在交付前检查 AI 腔与证据边界。
 
 Each skill is a portable directory with a `SKILL.md` file at its root. Some
 skills also include references, scripts, examples, and agent-specific metadata.
