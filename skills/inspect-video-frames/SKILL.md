@@ -8,15 +8,30 @@ description: Inspect and analyze video files by probing metadata, extracting rep
 Use FFmpeg through `scripts/video_frames.py`. Prefer staged inspection because feeding every
 frame to a vision model is usually wasteful and can exceed context limits.
 
+## Dependency Preflight
+
+Before running the script:
+
+1. Check for an available Python 3 interpreter and for `ffmpeg` and `ffprobe` on `PATH`.
+2. If any dependency is missing, report the exact missing commands and ask whether the user wants
+   them installed.
+3. Do not install dependencies or change the system until the user explicitly agrees.
+4. After approval, use an installation method appropriate for the current operating system, then
+   verify all dependencies again before inspecting the video.
+
+On Windows, the Python command may be `py` or `python` instead of `python3`. Use the interpreter
+that passed the dependency check in all subsequent commands.
+
 ## Workflow
 
-1. Run `probe` to learn duration, frame rate, dimensions, and frame-count estimate.
-2. Run `overview` to sample the whole timeline into timestamped contact sheets.
-3. Inspect the sheets visually and identify relevant time ranges.
-4. Run `detail` only on those ranges at a suitable sampling rate.
-5. Run `all` only when the user explicitly needs every decoded frame or exact adjacent-frame
+1. Complete the dependency preflight.
+2. Run `probe` to learn duration, frame rate, dimensions, and frame-count estimate.
+3. Run `overview` to sample the whole timeline into timestamped contact sheets.
+4. Inspect the sheets visually and identify relevant time ranges.
+5. Run `detail` only on those ranges at a suitable sampling rate.
+6. Run `all` only when the user explicitly needs every decoded frame or exact adjacent-frame
    comparison.
-6. If speech or sound matters, extract or transcribe audio separately; frame inspection does not
+7. If speech or sound matters, extract or transcribe audio separately; frame inspection does not
    analyze audio.
 
 Keep generated media in a task-specific working directory. Report the sampling interval or FPS
