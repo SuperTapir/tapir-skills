@@ -1,0 +1,6 @@
+interface:
+  display_name: "生成并应用 CadenzaOS Launcher Cover"
+  short_description: "生成插画感强、功能鲜明且轮廓干净的 1-bit Cover"
+  default_prompt: "Use $generate-launcher-cover-art to create or refine a CadenzaOS Launcher Cover through illustration-master, pixel-review, approval, and verified-integration gates."
+policy:
+  allow_implicit_invocation: false

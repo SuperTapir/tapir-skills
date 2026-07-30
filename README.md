@@ -2,8 +2,9 @@
 
 [![skills.sh](https://skills.sh/b/SuperTapir/tapir-skills)](https://skills.sh/SuperTapir/tapir-skills)
 
-Opinionated skills for engineering judgment, app-icon craft, and presentation
-design. They encode the working preferences I use with AI agents: confirm the
+Opinionated skills for engineering judgment, app-icon craft, presentation
+design, video inspection, Chinese writing, and CadenzaOS Launcher Cover
+creation. They encode the working preferences I use with AI agents: confirm the
 root cause, make trade-offs explicit, build one strong visual relationship, and
 verify the result through a real workflow.
 
@@ -23,6 +24,7 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-icon-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-presentation-craft
 npx skills@latest add SuperTapir/tapir-skills --skill inspect-video-frames
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
+npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-art
 ```
 
 ## Skills
@@ -41,9 +43,14 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
 - **[tapir-writing-voice](./skills/tapir-writing-voice/SKILL.md)** — 按 Tapir
   已形成的中文写作声音起草、改写和审阅文章，保留真实经历、实践证据、
   工程判断和克制口语，并在交付前检查 AI 腔与证据边界。
+- **[generate-launcher-cover-art](./skills/generate-launcher-cover-art/SKILL.md)**
+  — A gated workflow for creating illustrated, readable, and verified 1-bit
+  CadenzaOS Launcher Covers.
 
 Each skill is a portable directory with a `SKILL.md` file at its root. Some
 skills also include references, scripts, examples, and agent-specific metadata.
+Except for `tapir-craft`, these skills require explicit invocation with their
+`$skill-name`.
 
 ## License
 

@@ -2,3 +2,5 @@ interface:
   display_name: "Tapir Icon Craft"
   short_description: "Story-driven app icon art direction and critique"
   default_prompt: "Use $tapir-icon-craft to design a focused, recognizable app icon for my product."
+policy:
+  allow_implicit_invocation: false

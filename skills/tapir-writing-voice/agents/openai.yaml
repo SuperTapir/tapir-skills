@@ -2,3 +2,5 @@ interface:
   display_name: "Tapir 写作声音"
   short_description: "用 Tapir 的真实经历、工程判断和克制口语撰写中文文章"
   default_prompt: "使用 $tapir-writing-voice 按我的写作声音起草或改写这篇中文文章，并在交付前检查 AI 腔和证据边界。"
+policy:
+  allow_implicit_invocation: false

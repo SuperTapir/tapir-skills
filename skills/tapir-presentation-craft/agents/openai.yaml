@@ -3,3 +3,5 @@ interface:
   short_description: "默认用 Slidev HTML 制作简洁、有力、可演讲的视觉叙事"
   brand_color: "#159BE8"
   default_prompt: "Use $tapir-presentation-craft to create a concise, memorable, source-first Slidev HTML presentation with presenter mode, strong visual relationships, purposeful icons, perceptible motion, and full validation. Use a native PPTX, Keynote, or Google Slides artifact only when I explicitly request that format."
+policy:
+  allow_implicit_invocation: false
