@@ -1,6 +1,7 @@
 ---
 name: inspect-video-frames
 description: Inspect and analyze video files by probing metadata, extracting representative frames, building timestamped contact sheets, and refining selected time ranges at higher frame rates. Use for requests to watch, understand, summarize, compare, troubleshoot, or find visual events in MP4, MOV, MKV, WebM, and other FFmpeg-readable videos, including requests to view every frame.
+disable-model-invocation: true
 ---
 
 # Inspect Video Frames

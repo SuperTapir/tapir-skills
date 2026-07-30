@@ -1,6 +1,7 @@
 ---
 name: tapir-presentation-craft
 description: Design, prompt, review, and refine concise, forceful, imageable presentations using Tapir's preference for one clear claim per slide, one memorable visual relationship, poster-like hierarchy, selective icon use, semantic typography contrast, restrained color, and perceptible decisive motion. Default unspecified presentation, slides, deck, or PPT creation requests to a Slidev HTML deck with presenter mode; use native PPTX, PowerPoint, Keynote, or Google Slides only when the user explicitly requests that format. Use when creating or critiquing presentations, pitch decks, technical talks, product presentations, conference talks, or presentation design systems; translating dense material into a visual narrative; preparing art direction for slide visuals; or diagnosing slides that feel generic, crowded, dry, UI-like, templated, weak, over-abstract, or over-animated.
+disable-model-invocation: true
 ---
 
 # Tapir Presentation Craft

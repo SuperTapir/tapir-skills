@@ -1,6 +1,7 @@
 ---
 name: generate-launcher-cover-art
 description: "Generate, simplify, review, de-fringe, convert, and optionally integrate Playdate-literate CadenzaOS Launcher Cover illustrations: highly legible 1-bit micro-posters with large titles, an App-specific functional hook, strong black/white recognition, clean solid contours, and controlled gray planes that add depth and fun within a coherent restrained industrial style. Use when adding or iterating TIMER, MOTION, SETTINGS, ANIMATION GALLERY, fallback, or a new App Cover; correcting a generic, unclear, flat, over-detailed, jagged, or dither-fringed Cover; producing smooth grayscale master PNGs; converting them to reviewed 350×155 and 280×124 1-bit assets; packing C++ headers; or applying an approved Cover to its App. Do not approve visual baselines without explicit user approval."
+disable-model-invocation: true
 ---
 
 # Generate Launcher Cover Art

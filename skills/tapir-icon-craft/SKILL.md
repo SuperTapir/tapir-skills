@@ -1,6 +1,7 @@
 ---
 name: tapir-icon-craft
 description: Design, prompt, review, and refine distinctive app logos and app icons using Tapir's preference for recognizable editorial illustration, one dominant product-specific relationship, disciplined visual hierarchy, industry-legible cues, bold cropping, restrained color, and small-size clarity. Use when creating or critiquing an app icon/logo, preparing ImageGen art direction, comparing icon concepts, translating user feedback into reusable taste constraints, or deciding whether an icon is focused, generic, over-abstract, over-detailed, or visually confused. This is a general icon-design skill and is not tied to PCB, orange branding, brushes, or any one product domain.
+disable-model-invocation: true
 ---
 
 # Tapir Icon Craft
