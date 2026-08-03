@@ -29,9 +29,10 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
 
 ## Skills
 
-- **[tapir-craft](./skills/tapir-craft/SKILL.md)** — Root-cause-first
-  debugging, explicit trade-offs, testable failure cases, and autonomous
-  verification.
+- **[tapir-craft](./skills/tapir-craft/SKILL.md)** — Minimal correct
+  implementations, root-cause-first debugging, explicit trade-offs, and
+  autonomous verification. Its minimal-solution ladder is adapted from
+  [Ponytail](https://github.com/DietrichGebert/ponytail).
 - **[tapir-icon-craft](./skills/tapir-icon-craft/SKILL.md)** — Story-driven
   app-icon and logo art direction with strong hierarchy and small-size clarity.
 - **[tapir-presentation-craft](./skills/tapir-presentation-craft/SKILL.md)** —

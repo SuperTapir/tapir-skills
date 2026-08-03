@@ -1,11 +1,42 @@
 ---
 name: tapir-craft
-description: Tapir 的工程问题处理准则。Use when debugging issues, investigating root causes, fixing bugs, defining tests or verification cases, reviewing code quality, or applying Tapir-style engineering judgment. 触发场景包括：排查问题、定位 bug、解决问题、修复代码、复现问题、写测试、做 E2E 验证、判断代码改法是否靠谱。
+description: Tapir 的工程开发与问题处理准则。Use when implementing product requirements or features, debugging issues, investigating root causes, fixing bugs, defining tests or verification cases, reviewing code quality, or applying Tapir-style engineering judgment. 触发场景包括：开发需求、实现功能、排查问题、定位 bug、解决问题、修复代码、复现问题、写测试、做 E2E 验证、判断代码改法是否靠谱。
 ---
 
 # Tapir Craft
 
-按 Tapir 的工程习惯处理问题：先确认 root cause，再识别方案 trade-off，再定义可验证的失败用例或验证 case，再实现修复，最后自主测试并尽量走真实流程闭环。
+按 Tapir 的工程习惯完成开发需求或处理问题：先确认目标、约束和验收标准；问题修复还要严格确认 root cause。理解真实链路后选择最小正确方案，再识别 trade-off，定义可验证的测试或验证 case，完成实现，最后自主测试并尽量走真实流程闭环。
+
+## 开发需求
+
+实现新需求前先确认：
+
+- 用户目标、使用场景和验收标准是什么。
+- 本次范围是什么，哪些内容明确不做。
+- 现有实现、数据契约和兼容约束是什么。
+- 用什么测试或真实流程证明需求已经完成。
+
+需求明确后再实现，不要把新需求错误地套成 root cause 排查。仍需遵循 trade-off awareness、Global thinking、TDD mindset 和 Self-test loop；发现局部实现与全局治理存在取舍时，说明差异并让用户决定，不擅自扩大范围。
+
+## 最小正确方案
+
+本节借鉴 [Ponytail](https://github.com/DietrichGebert/ponytail) 的最小实现决策阶梯，并按 Tapir 对根因、全局权衡和可验证交付的要求进行了调整。
+
+简单不是少理解，最小也不是代码高尔夫。先阅读任务涉及的代码并追踪真实数据流、调用方和边界，再按以下顺序选择方案；前一层已经正确满足目标时，就不要进入下一层：
+
+1. 需求是否真实存在且属于本次范围；推测性的未来需求不提前实现。
+2. 项目中是否已有 helper、组件、类型、模式或基础设施可以直接复用；新增前先搜索。
+3. 语言标准库、框架能力或浏览器、数据库、操作系统等平台原生能力是否已经覆盖。
+4. 项目已安装的依赖是否能够解决；不要为少量代码轻易增加新依赖。
+5. 只有上述方案都不成立时，才新增满足当前验收标准所需的最少代码。
+
+实现时遵循：
+
+- 不为单一实现预设接口、工厂或插件机制，不为不会变化的值增加配置，不为“以后可能用到”搭脚手架。
+- 优先删除重复逻辑和复用既有实现，避免维护可由现有状态推导出的重复状态。
+- 选择最小正确 diff，而不是表面最短 diff；修复共享根因通常比在每个调用方增加兜底更小、更可靠。
+- 不以精简为理由绕过项目架构和分层、明确验收、安全与权限、信任边界校验、防止数据丢失的错误处理、兼容性、无障碍或必要测试。
+- 若刻意采用存在明确上限的简化方案，应说明适用边界、何时失效以及何时升级；不要把已知风险包装成“保持简单”。
 
 ## 排查问题
 
@@ -82,7 +113,7 @@ description: Tapir 的工程问题处理准则。Use when debugging issues, inve
 
 交付时用简洁中文说明：
 
-- 根因是什么。
+- 开发需求说明目标和验收结果；问题修复说明根因是什么。
 - 方案的 trade-off、side effect 和可接受边界是什么。
 - 是否存在局部修复和全局治理的取舍点；如果存在，把选择交给用户判断。
 - 用什么测试或 case 证明问题存在。
