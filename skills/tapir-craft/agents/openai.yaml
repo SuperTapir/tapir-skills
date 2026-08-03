@@ -1,4 +1,4 @@
 interface:
   display_name: "Tapir Craft"
-  short_description: "Tapir-style debugging, fixes, and code taste"
-  default_prompt: "Use $tapir-craft to investigate the issue, confirm the root cause, define a failing test or verification case, fix it, and loop through validation."
+  short_description: "Minimal, correct implementation and root-cause fixes"
+  default_prompt: "Use $tapir-craft to clarify the goal, understand the real flow, choose the smallest correct solution, make trade-offs explicit, and validate the result."
