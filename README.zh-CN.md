@@ -29,6 +29,10 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
 npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-art
 ```
 
+`cadenza-presentations` 提供 Agent 工作流，不包含 CadenzaSlide runtime。使用前需按
+[CadenzaSlide 源码安装说明](https://github.com/SuperTapir/CadenzaSlide#install-from-source)
+单独安装 runtime，并确认 `cadenza --help` 可以运行。
+
 ## Skills
 
 - **[tapir-craft](./skills/tapir-craft/SKILL.md)** — 以最小正确实现、根因优先、
@@ -39,7 +43,8 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
 - **[tapir-presentation-craft](./skills/tapir-presentation-craft/SKILL.md)** — 制作简洁、
   有力、可演讲的视觉叙事，并强调明确动效与可复用的 source-first 系统。
 - **[cadenza-presentations](./skills/cadenza-presentations/SKILL.md)** — 通过
-  CadenzaSlide runtime 和可迁移 workspace 格式创建、修改、验证、预览与播放演示。
+  CadenzaSlide runtime 和可迁移 workspace 格式创建、修改、验证、预览与播放演示；
+  需要单独安装 `cadenza` CLI。
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — 分阶段执行 FFmpeg
   视频检查，包括元数据探测、带时间戳的总览图、局部高帧率提取和逐帧导出。
 - **[tapir-writing-voice](./skills/tapir-writing-voice/SKILL.md)** — 按 Tapir 已形成的

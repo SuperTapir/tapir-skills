@@ -30,6 +30,11 @@ npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
 npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-art
 ```
 
+`cadenza-presentations` contains the Agent workflow, not the CadenzaSlide
+runtime. Install the runtime separately by following the
+[CadenzaSlide source installation](https://github.com/SuperTapir/CadenzaSlide#install-from-source)
+and confirm that `cadenza --help` works before using the Skill.
+
 ## Skills
 
 - **[tapir-craft](./skills/tapir-craft/SKILL.md)** — Minimal correct
@@ -43,7 +48,8 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
   reusable source-first system.
 - **[cadenza-presentations](./skills/cadenza-presentations/SKILL.md)** — Create,
   revise, verify, preview, and present decks through the CadenzaSlide runtime
-  and its portable workspace format.
+  and its portable workspace format. Requires the separately installed
+  `cadenza` CLI.
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — Staged
   FFmpeg video inspection with metadata probes, timestamped overview sheets,
   targeted high-FPS detail extraction, and explicit every-frame export.

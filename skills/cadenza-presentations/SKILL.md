@@ -7,6 +7,12 @@ description: Create, revise, organize, verify, preview, and present CadenzaSlide
 
 Treat `deck.cadenza.json` and registered workspace files as the source of truth. Use the host Agent's own reasoning and file tools; never request an API key or call a model from Cadenza.
 
+## Runtime prerequisite
+
+This Skill teaches the authoring workflow; it does not bundle the CadenzaSlide runtime. Before the first Cadenza command, run `command -v cadenza`. Use the installed `cadenza` command when found; inside a CadenzaSlide source checkout, repository contributors may instead use `npm run cadenza --`. If neither route is available, stop and direct the user to the [CadenzaSlide installation instructions](https://github.com/SuperTapir/CadenzaSlide#install-from-source). Do not copy runtime files into the user's workspace or silently substitute a different presentation tool.
+
+Run the selected route with `--help` and confirm that it lists `init`, `new`, `inspect`, `visuals`, `verify`, `open`, `overview`, and `present`. A missing command means the runtime and Skill are incompatible and must be updated before authoring.
+
 ## Workspace boundary
 
 The Cadenza runtime and the user's workspace are separate. If the target folder has no `cadenza.config.json`, run `cadenza init <folder>`. Start a deck with `cadenza --workspace <folder> new <deck-id> --title=<title>`, then edit the generated public document. Keep every deck in `decks/<deck-id>/`, store local media in that deck's `assets/`, and write media references as `assets/<path>`. Never copy Cadenza source, `dist`, `node_modules`, or renderer assets into the workspace.
