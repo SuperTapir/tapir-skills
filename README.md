@@ -3,10 +3,10 @@
 [![skills.sh](https://skills.sh/b/SuperTapir/tapir-skills)](https://skills.sh/SuperTapir/tapir-skills)
 
 Opinionated skills for engineering judgment, app-icon craft, presentation
-design, video inspection, Chinese writing, and CadenzaOS Launcher Cover
-creation. They encode the working preferences I use with AI agents: confirm the
-root cause, make trade-offs explicit, build one strong visual relationship, and
-verify the result through a real workflow.
+design and authoring, video inspection, Chinese writing, and CadenzaOS Launcher
+Cover creation. They encode the working preferences I use with AI agents:
+confirm the root cause, make trade-offs explicit, build one strong visual
+relationship, and verify the result through a real workflow.
 
 ## Install
 
@@ -22,6 +22,7 @@ Install one skill:
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-icon-craft
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-presentation-craft
+npx skills@latest add SuperTapir/tapir-skills --skill cadenza-presentations
 npx skills@latest add SuperTapir/tapir-skills --skill inspect-video-frames
 npx skills@latest add SuperTapir/tapir-skills --skill tapir-writing-voice
 npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-art
@@ -38,6 +39,9 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
 - **[tapir-presentation-craft](./skills/tapir-presentation-craft/SKILL.md)** —
   Concise, imageable, speaker-led presentations with decisive motion and a
   reusable source-first system.
+- **[cadenza-presentations](./skills/cadenza-presentations/SKILL.md)** — Create,
+  revise, verify, preview, and present decks through the CadenzaSlide runtime
+  and its portable workspace format.
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — Staged
   FFmpeg video inspection with metadata probes, timestamped overview sheets,
   targeted high-FPS detail extraction, and explicit every-frame export.
