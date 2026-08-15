@@ -57,6 +57,17 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
 references、scripts、examples 和 Agent 专用元数据。除 `tapir-craft` 外，其他 Skills
 默认需要使用各自的 `$skill-name` 显式调用。
 
+## CadenzaSlide 实际使用
+
+`cadenza-presentations` 直接操作真实的 Cadenza workspace：在 Studio 中创作，
+通过 Overview 扫描完整叙事，最后在 Audience 中验收真实放映结果。
+
+| Studio 创作 | Overview 总览 |
+| --- | --- |
+| ![包含页面导航、画布与创作控制的 CadenzaSlide Studio](./docs/images/cadenza-presentations/studio.png) | ![以接触表展示完整演示的 CadenzaSlide Overview](./docs/images/cadenza-presentations/overview.png) |
+
+![渲染最终页面的 CadenzaSlide Audience 视图](./docs/images/cadenza-presentations/audience.png)
+
 ## 许可证
 
 MIT。仓库内附带的 Lucide runtime 保留其自身的许可证声明。
