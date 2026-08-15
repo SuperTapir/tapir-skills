@@ -66,6 +66,18 @@ skills also include references, scripts, examples, and agent-specific metadata.
 Except for `tapir-craft`, these skills require explicit invocation with their
 `$skill-name`.
 
+## CadenzaSlide in practice
+
+`cadenza-presentations` works against the real Cadenza workspace: author in
+Studio, scan the whole narrative in Overview, then verify the final Audience
+render.
+
+| Studio authoring | Overview review |
+| --- | --- |
+| ![CadenzaSlide Studio with the deck navigator, canvas, and authoring controls](./docs/images/cadenza-presentations/studio.png) | ![CadenzaSlide Overview showing the complete deck as a contact sheet](./docs/images/cadenza-presentations/overview.png) |
+
+![CadenzaSlide Audience view rendering a finished slide](./docs/images/cadenza-presentations/audience.png)
+
 ## License
 
 MIT. The bundled Lucide runtime retains its own license notice.
