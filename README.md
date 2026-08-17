@@ -47,9 +47,10 @@ and confirm that `cadenza --help` works before using the Skill.
   Concise, imageable, speaker-led presentations with decisive motion and a
   reusable source-first system.
 - **[cadenza-presentations](./skills/cadenza-presentations/SKILL.md)** — Create,
-  revise, verify, preview, and present decks through the CadenzaSlide runtime
-  and its portable workspace format. Requires the separately installed
-  `cadenza` CLI.
+  revise, verify, preview, present, and package decks through the CadenzaSlide
+  runtime. Editable work stays in a portable workspace; a finished deck can be
+  shared as one `.cadenza` file. Requires the separately installed `cadenza`
+  CLI.
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — Staged
   FFmpeg video inspection with metadata probes, timestamped overview sheets,
   targeted high-FPS detail extraction, and explicit every-frame export.
@@ -70,7 +71,10 @@ Except for `tapir-craft`, these skills require explicit invocation with their
 
 `cadenza-presentations` works against the real Cadenza workspace: author in
 Studio, scan the whole narrative in Overview, then verify the final Audience
-render.
+render. When a single-file deliverable is requested, the Skill packs the
+verified deck and its local assets into a `.cadenza` archive. Recipients still
+need the CadenzaSlide runtime; on macOS they can register Finder double-click
+support with `cadenza associate`.
 
 | Studio authoring | Overview review |
 | --- | --- |

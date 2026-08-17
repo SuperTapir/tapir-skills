@@ -43,8 +43,9 @@ npx skills@latest add SuperTapir/tapir-skills --skill generate-launcher-cover-ar
 - **[tapir-presentation-craft](./skills/tapir-presentation-craft/SKILL.md)** — 制作简洁、
   有力、可演讲的视觉叙事，并强调明确动效与可复用的 source-first 系统。
 - **[cadenza-presentations](./skills/cadenza-presentations/SKILL.md)** — 通过
-  CadenzaSlide runtime 和可迁移 workspace 格式创建、修改、验证、预览与播放演示；
-  需要单独安装 `cadenza` CLI。
+  CadenzaSlide runtime 创建、修改、验证、预览、播放和打包演示。可编辑内容保留在
+  可迁移 workspace 中，完成的 deck 可以分享为单个 `.cadenza` 文件；需要单独安装
+  `cadenza` CLI。
 - **[inspect-video-frames](./skills/inspect-video-frames/SKILL.md)** — 分阶段执行 FFmpeg
   视频检查，包括元数据探测、带时间戳的总览图、局部高帧率提取和逐帧导出。
 - **[tapir-writing-voice](./skills/tapir-writing-voice/SKILL.md)** — 按 Tapir 已形成的
@@ -60,7 +61,10 @@ references、scripts、examples 和 Agent 专用元数据。除 `tapir-craft` �
 ## CadenzaSlide 实际使用
 
 `cadenza-presentations` 直接操作真实的 Cadenza workspace：在 Studio 中创作，
-通过 Overview 扫描完整叙事，最后在 Audience 中验收真实放映结果。
+通过 Overview 扫描完整叙事，最后在 Audience 中验收真实放映结果。用户需要单文件
+交付物时，Skill 会把验证通过的 deck 与本地资源打包成 `.cadenza`。接收方仍需安装
+CadenzaSlide runtime；macOS 用户运行一次 `cadenza associate` 后即可在 Finder 中
+双击打开。
 
 | Studio 创作 | Overview 总览 |
 | --- | --- |
