@@ -1,6 +1,6 @@
 ---
 name: cadenza-presentations
-description: Create, revise, organize, verify, preview, and present CadenzaSlide decks in a Cadenza workspace. Use when the user asks to make or modify a web presentation, work by slide ID, manage outline groups or speaker notes, open Overview, or run Cadenza CLI verification. Cadenza never calls AI; the current host Agent performs the work.
+description: Create, revise, organize, verify, preview, present, package, and open CadenzaSlide decks. Use when the user asks to make or modify a web presentation, work by slide ID, manage outline groups or speaker notes, open Overview, create or open a single-file .cadenza deck, or run Cadenza CLI verification. Cadenza never calls AI; the current host Agent performs the work.
 ---
 
 # Cadenza Presentations
@@ -12,6 +12,8 @@ Treat `deck.cadenza.json` and registered workspace files as the source of truth.
 This Skill teaches the authoring workflow; it does not bundle the CadenzaSlide runtime. Before the first Cadenza command, run `command -v cadenza`. Use the installed `cadenza` command when found; inside a CadenzaSlide source checkout, repository contributors may instead use `npm run cadenza --`. If neither route is available, stop and direct the user to the [CadenzaSlide installation instructions](https://github.com/SuperTapir/CadenzaSlide#install-from-source). Do not copy runtime files into the user's workspace or silently substitute a different presentation tool.
 
 Run the selected route with `--help` and confirm that it lists `init`, `new`, `inspect`, `visuals`, `verify`, `open`, `overview`, and `present`. A missing command means the runtime and Skill are incompatible and must be updated before authoring.
+
+When the user requests a single-file deck, also confirm that `--help` lists `pack` and `unpack`; for macOS Finder double-click setup, confirm `associate`. Do not promise archive delivery or file association when the installed runtime lacks the required command.
 
 ## Workspace boundary
 
@@ -36,6 +38,7 @@ Promotion is selective, not archival. Before a candidate becomes public, define 
 - Before questioning or outlining a new deck, use [creation-guidance.md](references/creation-guidance.md) to choose the fast or guided path and present a reviewable creation contract.
 - For an existing deck change, run `cadenza inspect <deck-id>/slide:<slide-id>`, edit the authoritative file directly, then verify.
 - For group, ordering, notes, Overview, Gallery, CLI, or presentation commands, consult [cli-contract.md](references/cli-contract.md).
+- For a single-file delivery, finish verification and visual acceptance first, then follow the archive workflow in [cli-contract.md](references/cli-contract.md).
 - Load [deck-schema.md](references/deck-schema.md) only when authoring or diagnosing deck JSON.
 - Load [design-system.md](references/design-system.md) only when adding or changing a custom layout/component.
 
@@ -45,6 +48,7 @@ Promotion is selective, not archival. Before a candidate becomes public, define 
 - Read user-provided source files in place. Do not copy, upload, rename, or mutate source material unless explicitly asked.
 - Address slides by stable slide ID. Do not invent block IDs. A screenshot may supplement a slide-ID request.
 - Make edits through normal workspace files and show normal Git/file diffs. Do not create an internal patch, accept/reject, undo, or revision protocol.
+- Treat the workspace as editable source and `.cadenza` as a reversible transport artifact. Never edit an opened archive in place; unpack it to a workspace first.
 - Keep Design Library read-only. The Host Agent records the creation contract in its execution plan; `deck.cadenza.json` remains the only deck content source.
 - Choose layouts from `master.layouts.<layout>.authoring` in the order `complete → startup → canvas`; never infer the policy from a hard-coded layout list.
 - During first creation, stop after producing an outline and wait for explicit user confirmation before filling slide content. Later additions do not require that checkpoint.

@@ -10,6 +10,12 @@
 6. 使用 14 个核心 layout 生成 `status: "outline"` 的稳定 slide ID 和可审阅 outline；按 creation guidance 展示每页主张、叙事作用和证据来源，打开 Overview 等待确认。
 7. 确认后读取 `master.layouts.<layout>.authoring`，按 complete、startup、canvas 顺序决定页面路径；按 creation guidance 记录决策、准备资源并分批填充内容与 notes。全部批次完成后改为 `status: "complete"`，运行 `cadenza verify <deck-id> --browser` 并在真实 Audience viewport review。
 
+## 单文件交付
+
+- workspace 始终是可编辑源。只有用户明确要求单文件、附件或便于分享的 deck 时，才在全部验证和 Audience/Overview 验收完成后运行 `cadenza pack <deck-id>`。
+- 交付时报告 `.cadenza` 路径，并说明接收方需要安装 CadenzaSlide。macOS 可先运行一次 `cadenza associate`，之后在 Finder 双击打开；这项本机关联不随 archive 一起传输。
+- 直接 `open` archive 只进入临时只读 Studio。收到的 `.cadenza` 需要修改时，先运行 `cadenza unpack <file.cadenza> [path]` 恢复为独立 workspace，修改、复验后再打包新文件。
+
 ## Master changes
 
 Studio 只查看 Deck Master。用户要求调整视觉时，由当前 Agent 直接修改 deck 的 `master`，随后对全部受影响页面运行 verify 并在 Overview/Audience 复查；需要时调整个别页面的内容、slot override 或组件位置。Design Library 只作参考，永不 apply。

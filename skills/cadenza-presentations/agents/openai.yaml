@@ -1,6 +1,6 @@
 interface:
   display_name: "Cadenza Presentations"
-  short_description: "Create and verify CadenzaSlide presentations"
-  default_prompt: "Use $cadenza-presentations to create, revise, verify, preview, or present a deck in a Cadenza workspace."
+  short_description: "Create, verify, and package CadenzaSlide decks"
+  default_prompt: "Use $cadenza-presentations to create, revise, verify, preview, present, package, or open a CadenzaSlide deck."
 policy:
   allow_implicit_invocation: false
